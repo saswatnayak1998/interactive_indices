@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+url = "https://raw.githubusercontent.com/saswatnayak1998/interactive_indices/main/indexProcessed.csv"
+st.write("Saswat K Nayak")
 @st.cache_data
 def load_data():
-    return pd.read_csv('indexProcessed.csv', parse_dates=['Date'])
+    return pd.read_csv(url, parse_dates=['Date'])
 
 data = load_data()
 
